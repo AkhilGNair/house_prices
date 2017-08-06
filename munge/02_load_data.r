@@ -1,9 +1,3 @@
-source("lib/lib.r")
-library(data.table)
-library(magrittr)
-# devtools::install_github("fstpackage/fst")
-
-config = config::get(file = "conf/conf.yml")
 url_data = readLines("data/house_price.url")
 
 # To initialise, change download flag in "conf/conf.yml" to TRUE
@@ -27,3 +21,10 @@ if (flag_download) {
 } else {
   message("Initialise data in 'cache/' by changing download flag in 'conf/conf.yml' to TRUE")
 }
+
+# Clean the workspace
+rm(colnames)
+rm(years)
+rm(flag_download)
+rm(url_data)
+rm(urls)
