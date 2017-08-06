@@ -1,5 +1,4 @@
 source("lib/lib.r")
-source("munge/load_data.r")
 library(data.table)
 library(magrittr)
 # devtools::install_github("fstpackage/fst")
