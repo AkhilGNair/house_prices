@@ -1,0 +1,64 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.8.21
+RVersion: 3.4.1
+Repos: CRAN=https://cran.rstudio.com/
+
+Package: Rcpp
+Source: CRAN
+Version: 0.12.12
+Hash: 8b3d5ebb9a9a4ab5c86b3a81b0cfb774
+
+Package: config
+Source: github
+Version: 0.2
+Hash: 9b6dbdc8b001690d2d723726c3c38afa
+Requires: yaml
+GithubRepo: config
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: 27d4db88ab80a0d2476c7d04908f209c9e11227d
+
+Package: data.table
+Source: CRAN
+Version: 1.10.4
+Hash: 2c7c47ccb40d01c7b214c8eff818108d
+
+Package: fst
+Source: github
+Version: 0.7.2
+Hash: 1a0f5b82a31c5a69358d00da9e1e30ef
+Requires: Rcpp, data.table
+GithubRepo: fst
+GithubUsername: fstpackage
+GithubRef: master
+GithubSha1: 862cc3a360e5672dc9ddf8c56bda11d8d37c005b
+
+Package: magrittr
+Source: CRAN
+Version: 1.5
+Hash: bdc4d48c3135e8f3b399536ddf160df4
+
+Package: packrat
+Source: github
+Version: 0.4.8-21
+Hash: cc7987675188c1a74c027d75247cccc6
+GithubRepo: packrat
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: ff5a9523d749ad0e936f828197f09979904251b3
+
+Package: stringi
+Source: CRAN
+Version: 1.1.5
+Hash: b6308e49357a0b475f433599e0d8b5eb
+
+Package: stringr
+Source: CRAN
+Version: 1.2.0
+Hash: 25a86d7f410513ebb7c0bc6a5e16bdc3
+Requires: magrittr, stringi
+
+Package: yaml
+Source: CRAN
+Version: 2.1.14
+Hash: c81230c3a7d9ba20607ad6b4331173d1
