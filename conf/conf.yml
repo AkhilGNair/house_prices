@@ -1,0 +1,27 @@
+default:
+
+    paths:
+        cache: "cache/"
+
+    download: FALSE
+    years: !expr 2010:2017
+    
+    data_specification:
+        dt_house_prices:
+            colnames:
+                V1: id
+                V2:  price
+                V3:  date
+                V4:  postcode
+                V5:  type
+                V6:  new
+                V7:  hold
+                V8:  no
+                V9:  no2
+                V10: street
+                V11: locality
+                V12: town
+                V13: authority
+                V14: county
+                V15: status
+                V16: Unk
