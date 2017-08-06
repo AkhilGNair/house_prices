@@ -1,6 +1,7 @@
 source("lib/lib.r")
 library(data.table)
 library(magrittr)
+# devtools::install_github("fstpackage/fst")
 
 config = config::get(file = "conf/conf.yml")
 url_data = readLines("data/house_price.url")
