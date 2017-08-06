@@ -25,3 +25,4 @@ default:
                 V14: county
                 V15: status
                 V16: Unk
+            save_as: cache/house_prices.fst  
