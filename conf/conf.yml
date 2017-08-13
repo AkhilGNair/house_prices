@@ -1,22 +1,24 @@
 default:
 
     paths:
-        cache: "cache/"
+        cache: "cache/"  # Doesn't work
 
-    download: FALSE
-    years: !expr 2010:2017
-    
     data_specification:
         dt_house_prices:
+            download: FALSE
+            ext: url
+            init_function: init_house_prices
+            assign: dt
+            save_as: cache/house_prices.fst  
             colnames:
-                V1: id
+                V1:  id
                 V2:  price
                 V3:  date
                 V4:  postcode
                 V5:  type
                 V6:  new
                 V7:  hold
-                V8:  no
+                V8:  number
                 V9:  no2
                 V10: street
                 V11: locality
@@ -25,4 +27,19 @@ default:
                 V14: county
                 V15: status
                 V16: Unk
-            save_as: cache/house_prices.fst  
+            extra:
+                url: http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-%(year)d.csv
+                years: !expr 2010:2017
+                
+        dt_postcodes:
+            download: TRUE
+            ext: url
+            init_function: init_postcodes
+            assign: dt_postcodes
+            save_as: cache/postcodes.fst  
+            colnames:
+                postcode:  postcode
+                latitude:  latitude
+                longitude: longitude
+            extra:
+                url: https://www.freemaptools.com/download/full-postcodes/ukpostcodes.zip
