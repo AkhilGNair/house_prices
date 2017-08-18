@@ -50,7 +50,7 @@ load_dataset = function(dataset, config) {
     assign(assign_to, init_data[[init_function]](config), envir = globalenv())
     
     # Write to cache for easy loading next time
-    fst::write.fst(dt, filepath)
+    fst::write.fst(get(assign_to), path = filepath)
     
     cat(paste0("CACHED: ", dataset, " available as ", assign_to, "\n"))
     

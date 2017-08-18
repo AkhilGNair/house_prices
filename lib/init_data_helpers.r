@@ -54,6 +54,6 @@ init_postcodes = function(config) {
   dt = fread(file.path(temp_dir, "ukpostcodes.csv"))
   
   # Return only columns we care about
-  dt[, colnames, with = FALSE]
+  dt[, colnames, with = FALSE][]
   
 }
