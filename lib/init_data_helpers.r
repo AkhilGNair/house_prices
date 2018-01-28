@@ -48,7 +48,7 @@ init_postcodes = function(config) {
   download.file(url_data, temp_zip)
   
   # Unzipping will only work on a linux system with zip installed
-  system(paste("unzip", temp_zip, "-d", temp_dir)) 
+  unzip(temp_zip, exdir = temp_dir)
   
   # Read in from tmp folder
   dt = fread(file.path(temp_dir, "ukpostcodes.csv"))
