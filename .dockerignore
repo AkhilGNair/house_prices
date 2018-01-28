@@ -1,0 +1,6 @@
+.git
+.Rhistory
+
+# Don't need packrat installed files
+packrat/lib*/
+packrat/src

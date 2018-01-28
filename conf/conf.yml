@@ -5,7 +5,7 @@ default:
 
     data_specification:
         dt_house_prices:
-            download: FALSE
+            download: TRUE
             ext: url
             init_function: init_house_prices
             assign: dt
